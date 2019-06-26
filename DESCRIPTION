@@ -1,0 +1,21 @@
+Package: MLSurvival
+Title: Machine Learning for Survival Analysis
+Version: 0.1.0
+Author: person("Che", "Ngufor", , "Ngufor.Che@mayo.edu", role = c("aut", "cre"))
+Maintainer: Che Ngufor <Ngufor.Che@mayo.edu>
+Description: Machine learning methods for survival analysis. 
+Depends:
+    R (>= 3.1.2)
+Imports:
+    PresenceAbsence,
+    caret,
+    ranger,
+    gbm,
+    glmnet, 
+    kernlab,
+    xgboost,
+    glmnetUtils
+License: GPL(>= 3)
+LazyData: true
+NeedsCompilation: no
+RoxygenNote: 6.1.1
