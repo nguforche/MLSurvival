@@ -1,7 +1,8 @@
 #' @title Cox proportional hazard model  
 #' @description Train the Cox model through cross-validation and select the optimal survival classification threshold. 
-#' A regularized Cox approach which performs feature selection is also implemeted 
-#' @name cox  
+#' A regularized Cox approach which performs feature selection is also implemeted. For regularize cox, the optimal set of variables is 
+#' selected through cross-validation and used to train the final model on the complete data  
+#' @name train.cox  
 #' @param form survival formula 
 #' @param dat  data frame 
 #' @param predict.times survival prediction times 
@@ -22,8 +23,6 @@
 #' \item{predict.times: }{ survival prediction times}
 #' \item{bestTune: }{ optimal tuning parameters} 
 #' }
-
-#' @author  Che Ngufor <Ngufor.Che@@mayo.edu>
 NULL 
 #' @rdname cox  
 #' @export

@@ -1,3 +1,23 @@
+#' @title Function to implement proportional hazard model  
+#' @description Train the  Cox model. Optionally, the regularize cox can also be trained based on the implementation in \code{glmnetUtils}.  
+#' 
+#' @param form survival formula 
+#' @param dat  data frame 
+#' @param trControl  list of control parameters:  
+#'  \enumerate{
+#'  \item maxit: number of iterations in \code{glmnet}  
+#'  \item regularize: train regularize cox?
+#'  \item nfolds :  number of folds in \code{glmnet} 
+#'  \item lambda : numeric vector of lambda values in \code{glmnet} 
+#'  \item alpha : numeric vector of alpha values in \code{cva.glmnet}    
+#' }  
+#' @return returns a list with items: 
+#' \itemize{
+#' \item{model: }{ object of class coxph}
+#' \item{form: }{ survival formula} 
+#' }
+
+
  COX <- function(form, dat, trControl = NULL){
   
   if(trControl$regularize){
