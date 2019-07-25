@@ -41,7 +41,8 @@ predict.times <- sort(predict.times)
   }
 
 if(is.null(trControl))
-trControl = list(number = 5, regularize = FALSE, lambda = seq(0.001,0.1,by = 0.001), maxit = 10000, alpha = 1, nfolds = 3)
+  trControl = list(number = 5, regularize = FALSE, lambda = seq(0.001,0.1,by = 0.001), maxit = 10000, 
+                   alpha = 1, nfolds = 3)
 
 resp.vars <- all.vars(form[[2]]) ## 
 time = resp.vars[1]; status = resp.vars[2]

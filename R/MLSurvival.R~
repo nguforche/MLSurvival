@@ -86,7 +86,8 @@ COX = {model <- train_cox(form=form, dat=dat, predict.times=predict.times, trCon
 }, 
 RSF = {model <- train_RSF(form=form, dat=dat, predict.times=predict.times, trControl=trControl, 
                     parallel = parallel, mc.cores = mc.cores, seed = seed, ...)
-                                        
+                    
+                    
 #cat("done RSF \n")
 }, 
 Classifier = {model <- train_classifier(form=form, dat=dat, newdata = newdata, method = mod1, predict.times=predict.times, trControl=trControl, 

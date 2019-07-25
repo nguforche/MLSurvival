@@ -5,8 +5,8 @@
 \alias{train_RSF}
 \title{RSF: Random Survival Forest}
 \usage{
-train_RSF(form, dat, predict.times, trControl = NULL, seed = 123,
-  parallel = FALSE, mc.cores = 2, ...)
+train_RSF(form, dat, newdata = NULL, predict.times, trControl = NULL,
+  seed = 123, parallel = FALSE, mc.cores = 2, ...)
 }
 \arguments{
 \item{form}{survival formula}

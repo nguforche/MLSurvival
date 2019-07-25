@@ -228,7 +228,7 @@ finalModel  <- ranger(data = dat[, c(status, time, rhs.vars)],
                      
 } else {
 mtry <- floor(p/3)
-finalModel  <- ranger(data = dat[, c(status, time, rhs.vars)],  
+model  <- ranger(data = dat[, c(status, time, rhs.vars)],  
                      seed = seed, 
                      importance = trControl$importance, 
                      mtry = mtry, 

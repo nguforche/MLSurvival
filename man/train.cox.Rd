@@ -2,7 +2,12 @@
 % Please edit documentation in R/train.cox.R
 \name{train.cox}
 \alias{train.cox}
+\alias{train_cox}
 \title{Cox proportional hazard model}
+\usage{
+train_cox(form, dat, newdata = NULL, predict.times, trControl = NULL,
+  parallel = FALSE, mc.cores = 2, seed = 123, ...)
+}
 \arguments{
 \item{form}{survival formula}
 
@@ -18,9 +23,9 @@
 
 \item{parallel}{run cross-validation in parallel? Uses mclapply which works only on linux}
 
-\item{tuneLength}{same as tuneLength in the caret package}
-
 \item{\dots}{further arguments passed to caret or other methods.}
+
+\item{tuneLength}{same as tuneLength in the caret package}
 }
 \value{
 returns a list with items: 

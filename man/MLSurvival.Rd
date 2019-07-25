@@ -2,15 +2,22 @@
 % Please edit documentation in R/MLSurvival.R
 \name{MLSurvival}
 \alias{MLSurvival}
+\alias{MLSurvival.default}
+\alias{MLSurvival.formula}
 \title{MLSurvival}
 \usage{
-MLSurvival(form, dat, method, predict.times, trControl, parallel = FALSE,
-  dummy.vars = TRUE, mc.cores = 2, seed = 123, ...)
+MLSurvival(x, ...)
+
+\method{MLSurvival}{default}(x, y, method, predict.times, trControl,
+  parallel = FALSE, dummy.vars = TRUE, mc.cores = 2, seed = 123,
+  perf = TRUE, ...)
+
+\method{MLSurvival}{formula}(form, dat, newdata = NULL, method,
+  predict.times, trControl, parallel = FALSE, dummy.vars = TRUE,
+  mc.cores = 2, seed = 123, perf = TRUE, ...)
 }
 \arguments{
-\item{form}{survival formula}
-
-\item{dat}{data frame}
+\item{\dots}{further arguments passed to caret or other methods.}
 
 \item{method}{character verctor of machine learning algorithms. Implemented algorithms 
  \enumerate{
@@ -34,7 +41,11 @@ MLSurvival(form, dat, method, predict.times, trControl, parallel = FALSE,
 
 \item{seed}{random seed}
 
-\item{\dots}{further arguments passed to caret or other methods.}
+\item{perf}{get performance metrics ?}
+
+\item{form}{survival formula}
+
+\item{dat}{data frame}
 }
 \value{
 returns a list with items: 

@@ -124,7 +124,7 @@ y = obs
 y[(predict.times[ii] < ts)] <- 0
 
 AUC <- Performance.measures(pred=p, obs= y, threshold= threshold[ii])
-cbind.data.frame(method = method, predict.times = predict.times[ii],  AUC)
+cbind(method = method, predict.times = predict.times[ii],  AUC)
 }))
 rownames(perf) <- NULL 
 },

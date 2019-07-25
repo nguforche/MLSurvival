@@ -96,6 +96,7 @@ for(ii in 1:length(predict.times)){
     dd <- dat 
     
     y[(predict.times[ii] < ti)] <- 0
+    print(table(y))
 #    y[(predict.times[ii] >= v & predict.times[ii] < ti)] <- 0
     dd[, status] <- y 
     dd[, status] <- factor(ifelse(dd[, status]==1, "Yes", "No"))      
